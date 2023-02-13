@@ -10,6 +10,11 @@ func main() {
 	handleErr(err)
 
 	defer d.Close()
+
+	d.Add("golang", "A wonderful language")
+	entry, _ := d.Get("golang")
+
+	fmt.Println(entry)
 }
 
 func handleErr(err error) {
