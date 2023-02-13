@@ -83,6 +83,12 @@ func sortedKeys(entries map[string]Entry) []string {
 	return keys
 }
 
+func (d *Dictionary) Remove(word string) error {
+	return d.db.Update(func(txn *badger.Txn) error {
+		return txn.Delete([]byte(word))
+	})
+}
+
 func getEntry(item *badger.Item) (Entry, error) {
 	var entry Entry
 	var buffer bytes.Buffer
