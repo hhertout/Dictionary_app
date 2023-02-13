@@ -11,10 +11,11 @@ func main() {
 
 	defer d.Close()
 
-	d.Add("golang", "A wonderful language")
-	entry, _ := d.Get("golang")
-
-	fmt.Println(entry)
+	d.Add("python", "An interpreted language")
+	words, entries, _ := d.List()
+	for _, word := range words {
+		fmt.Println(entries[word])
+	}
 }
 
 func handleErr(err error) {
