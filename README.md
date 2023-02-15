@@ -8,7 +8,7 @@ Create and delete a définition, get a list, find a definition...
 
 ## Run it
 
-<code>./dict action </code> followed by :
+<code>./dict action ... </code> followed by :
 
 - <code>list</code> to get all the definitions
 - <code>add YOUR_WORD "YOUR_DEFINITION"</code> to add a definition
